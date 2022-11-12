@@ -1,0 +1,46 @@
+@import '../../global.scss';
+
+#Contact {
+    form {
+        padding: 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border: 1px solid $secondary;
+        border-radius: $radius;
+        h1 {
+            margin-bottom: 35px;
+        }
+        input, textarea {
+            margin-bottom: 35px;
+            padding: 17.5px;
+            width: 100%;
+            max-width: 350px;
+            background-color: $primary;
+            color: $text;
+            border-radius: $radius;
+            resize: none;
+            border: 1px solid $secondary;
+            &:focus {
+                border-color: $accent;
+            }
+        }
+        textarea {
+            height: 140px;
+        }
+        button {
+            padding: 17.5px;
+            width: 100%;
+            max-width: 350px;
+            background-color: $accent;
+            color: $primary;
+            border: 1px solid $accent;
+            border-radius: $radius;
+            &:hover {
+                background-color: $primary;
+                color: $accent;
+            }
+        }
+    }
+}

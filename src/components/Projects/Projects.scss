@@ -1,0 +1,51 @@
+@import '../../global.scss';
+
+#Projects {
+    display: flex;
+    flex-direction: column;
+    .header {
+        width: 100vw;
+        background-color: $accent;
+    }
+    .project {
+        margin-bottom: 35px;
+        padding: 35px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border: 1px solid $secondary;
+        border-radius: $radius;
+        .name {
+            margin-bottom: 35px;
+        }
+        .description {
+            margin-bottom: 35px;
+        }
+        .links {
+            display: flex;
+            justify-content: space-between;
+            a {
+                padding: 17.5px;
+                display: flex;
+                align-items: center;
+                color: $primary;
+                background-color: $accent;
+                border-radius: $radius;
+                border: 1px solid $accent;
+                &:first-of-type {
+                    margin-right: 17.5px;
+                }
+                &:hover {
+                    background-color: $primary;
+                    color: $accent;
+                }
+                .icon {
+                    font-size: 17.5px;
+                    margin-right: 8.65px;
+                }
+            }
+        }
+    }
+}

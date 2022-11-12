@@ -1,0 +1,25 @@
+$font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$primary: white;
+$secondary: lightgrey;
+$text: black;
+$accent: crimson;
+$opacity: 0.70;
+$shadow: 0 0 8.65px 0;
+$radius: 8.65px;
+$breakpoints: (
+    xs: 250px,
+    sm: 500px,
+    md: 750px,
+    lg: 1000px,
+    xl: 1250px
+);
+@mixin breakpoint($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+    @else {
+        @error "invalid breakpoint: #{$breakpoint}";
+    }
+}

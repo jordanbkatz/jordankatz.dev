@@ -1,0 +1,13 @@
+@import '../../global.scss';
+
+#Layout {
+    width: 100%;
+    main {
+        margin-top: 70px;
+        padding: 35px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
