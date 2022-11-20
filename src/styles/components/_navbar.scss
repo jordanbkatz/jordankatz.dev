@@ -1,0 +1,83 @@
+nav {
+    z-index: 1;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $primary;
+    border-bottom: 1px solid $secondary;
+    @include mobile {
+        padding: 0px 35px;
+    }
+    @include desktop {
+        padding: 0px 70px;
+    }
+    .name {
+        &:hover {
+            color: $accent;
+            cursor: pointer;
+        }
+    }
+    .menu {
+        z-index: 1;
+        display: none;
+        align-items: center;
+        background-color: $primary;
+        border-bottom: 1px solid $secondary;
+        @include mobile {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            flex-direction: column;
+        }
+        @include desktop {
+            position: relative;
+            top: 0;
+            display: flex;
+        }
+        &.active {
+            display: flex;
+        }
+        .link {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include mobile {
+                width: 100%;
+            }
+            @include desktop {
+                &:not(:last-of-type) {
+                    margin-right: 35px;
+                }
+            }
+            &:hover, &.active {
+                color: $accent;
+                cursor: pointer;
+            }
+        }
+    }
+    .toggle {
+        align-items: center;
+        background-color: $primary;
+        @include mobile {
+            display: flex;
+        }
+        @include desktop {
+            display: none;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+        .icon {
+            font-size: 35px;
+            color: $text;
+            background-color: $primary;
+        }
+    }
+}
