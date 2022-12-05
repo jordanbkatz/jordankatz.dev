@@ -1,7 +1,7 @@
 import * as SiIcons from 'react-icons/si';
 import socials from '../data/socials';
 
-function Footer() {
+const Footer: React.FC = () => {
     const year = new Date().getFullYear();
     return (
         <footer>

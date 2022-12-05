@@ -2,15 +2,15 @@ import { useState } from 'react';
 import { Link } from 'react-scroll';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
-function Navbar() {
-    const sections = ['About', 'Skills', 'Projects', 'Contact'];
-    const [show, setShow] = useState(false);
+const Navbar: React.FC = () => {
+    const sections = ['about', 'skills', 'projects', 'contact'];
+    const [show, setShow] = useState<boolean>(false);
     const handleCloseMenu = () => setShow(false);
     const handleToggleMenu = () => setShow(!show);
     return (
         <nav>
             <Link
-                to="Intro"
+                to="intro"
                 spy={true}
                 smooth={true}
                 offset={-105}

@@ -1,24 +1,16 @@
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Intro from './components/Intro';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './pages/Home';
 
-function App() {
+const App: React.FC = () => {
     return (
-        <div className="app">
-            <Navbar />
-            <div className="main">
-                <Intro />
-                <About />
-                <Skills />
-                <Projects />
-                <Contact />
-            </div>
-            <Footer />
-        </div>
+        <Router>
+            <Layout>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                </Routes>
+            </Layout>
+        </Router>
     );
 };
 

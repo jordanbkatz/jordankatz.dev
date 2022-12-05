@@ -3,19 +3,23 @@ import emailjs from '@emailjs/browser';
 import { FaCheckCircle, FaExclamationTriangle } from 'react-icons/fa';
 import Section from './Section';
 
-function Contact() {
-    const initialFields = [
+const Contact: React.FC = () => {
+    interface IField {
+        name: string;
+        value: string;
+    }
+    const [fields, setFields] = useState<IField[]>([
         { name: 'name', value: '' },
         { name: 'email', value: '' },
         { name: 'subject', value: '' },
         { name: 'message', value: '' }
-    ];
-    const [fields, setFields] = useState(initialFields);
-    const [error, setError] = useState(false);
-    const [status, setStatus] = useState('');
+    ]);
+    const [error, setError] = useState<boolean>(false);
+    const [status, setStatus] = useState<string>('');
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = e.target;
-        setFields({ ...fields, [name]: value });
+        setFields(fields.map(field => {
+            return field.name === e.target.name ? { ...field, value: e.target.value } : field;
+        }));
     }
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -25,8 +29,9 @@ function Contact() {
         setStatus('sending');
         try {
             await emailjs.sendForm('service_0mgji33', 'template_8j5uwlk', e.currentTarget, 'DOrPnWOF1jtkxR6LO');
-            e.currentTarget.reset();
-            setFields(initialFields);
+            setFields(fields.map(field => { 
+                return { ...field, value: '' };
+            }));
             setError(false);
             setStatus('success');
         }
@@ -35,7 +40,7 @@ function Contact() {
         }
     };
     return (
-        <Section name="Contact">
+        <Section name="contact">
             <form onSubmit={handleSubmit}>
                 <h1>Get in Touch</h1>
                 {fields.map(({ name, value }) => (

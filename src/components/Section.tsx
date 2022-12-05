@@ -3,9 +3,9 @@ interface ISectionProps {
     name: string;
 }
 
-function Section({ children, name }: ISectionProps) {
+const Section: React.FC<ISectionProps> = ({ children, name }) => {
     return (
-        <section id={name}>
+        <section className={name}>
             <header>
                 <h1>{name}</h1>
             </header>

@@ -1,4 +1,11 @@
-const skills = [
+import { IIcon } from '../models/icon';
+
+interface ISkill {
+    type: string;
+    icons: IIcon[];
+}
+
+const skills: ISkill[] = [
     { 
         type: "Front End", 
         icons: [
@@ -24,7 +31,7 @@ const skills = [
             },
             {
                 name: "Typescript",
-                url: "",
+                url: "https://www.typescriptlang.org/",
                 color: "#007acc"
             },
             { 

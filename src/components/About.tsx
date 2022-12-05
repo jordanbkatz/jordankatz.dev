@@ -1,14 +1,14 @@
 import Section from './Section';
 
-function About() {
+const About: React.FC = () => {
     return (
-        <Section name="About">
+        <Section name="about">
             <div className="info">
                 <h1>Who am I?</h1>
                 <p>
-                    I started learning programming when I was 14 and have been learning ever since.
-                    asdf sadf hdsjk fhdsakj hfjkdsh fkjdsh kjfhdskj hfdksj fhdsa dsf dsja fds dasf 
-                    asdf sd gfsadhj fgdjsah gfdsa gfjd sajh fgdsjg fjds fhjds gfh gdshja fgjdhska.
+                    I started learning programming when I was 14 years old and have been learning ever since. 
+                    I enjoy both front-end and back-end web development.
+                    When I'm not programming, you can find me playing chess, listening to music, playing videogames, writing, or watching South Park.          
                 </p>
             </div>
         </Section>

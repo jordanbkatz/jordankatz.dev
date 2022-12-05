@@ -21,6 +21,9 @@ nav {
             color: $accent;
             cursor: pointer;
         }
+        &.active {
+            color: $accent;
+        }
     }
     .menu {
         z-index: 1;

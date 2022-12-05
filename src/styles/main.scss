@@ -1,0 +1,21 @@
+@import 
+    'abstracts/variables',
+    'abstracts/mixins';
+
+@import
+    'base/base',
+    'base/typography';
+
+@import
+    'components/about',
+    'components/contact',
+    'components/footer',
+    'components/intro',
+    'components/layout',
+    'components/navbar',
+    'components/projects',
+    'components/section',
+    'components/skills';
+
+@import
+    'pages/home';

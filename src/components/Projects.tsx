@@ -2,9 +2,9 @@ import { FaEye, FaCode } from 'react-icons/fa';
 import Section from './Section';
 import projects from '../data/projects';
 
-function Projects() {
+const Projects: React.FC = () => {
     return (
-        <Section name="Projects">
+        <Section name="projects">
             {projects.map(project => (
                 <div className="project" key={project.name}>
                     <h1 className="name">{project.name}</h1>

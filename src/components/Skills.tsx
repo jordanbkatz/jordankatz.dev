@@ -2,9 +2,9 @@ import * as SiIcons from 'react-icons/si';
 import Section from './Section';
 import skills from '../data/skills';
 
-function Skills() {
+const Skills: React.FC = () => {
     return (
-        <Section name="Skills">
+        <Section name="skills">
             {(skills).map(({ type, icons }) => (
                 <div className="skill" key={type}>
                     <h1 className="type">{type}</h1>

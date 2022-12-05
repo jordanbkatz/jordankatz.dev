@@ -1,11 +1,11 @@
 const nerd = require('../assets/nerd.webp');
 
-function Intro() {
+const Intro: React.FC = () => {
     return (
-        <section id="Intro">
+        <section className="intro">
             <h1>Hello, i'm Jordan</h1>
+            <p>I'm a Full Stack Engineer based in the U.S.</p>
             <img src={nerd} alt="nerd" />
-            <h1>I'm a Full Stack Engineer based in the U.S.</h1>
         </section>
     );
 };

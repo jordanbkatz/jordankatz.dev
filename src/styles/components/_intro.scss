@@ -1,4 +1,4 @@
-#Intro {
+.intro {
     width: 100%;
     height: calc(100vh - 140px);
     margin-bottom: 35px;
@@ -6,14 +6,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
-    border: 1px solid $secondary;
-    border-radius: 7px;
     h1 {
-        text-align: center;
-        display: flex;
-        align-items: center;
+        font-size: 70px;
+        margin-bottom: 35px;
+        @include mobile {
+            font-size: 35px;
+        }
+    }
+    p {
+        font-size: 35px;
+        margin-bottom: 35px;
+        @include mobile {
+            font-size: 17.5px;
+        }
     }
     img {
         width: 350px;
