@@ -9,20 +9,14 @@ const projects: IProject[] = [
     {
         name: "Flagame", 
         description: "A game where you match the correct country name to the flag", 
-        demo: "https://www.flagame.net",
+        demo: "https://flagame.net",
         code: "https://github.com/jordanbkatz/flagame" 
     },
     { 
         name: "Loser Bot", 
         description: "A Discord bot with weird commands", 
-        demo: "https://www.loserbot.com", 
+        demo: "https://discord.com/api/oauth2/authorize?client_id=948704208180359198&permissions=8&scope=bot", 
         code: "https://github.com/jordanbkatz/loser-bot" 
-    },
-    {
-        name: "Fortnite Todo List",
-        description: "A Fortnite-themed todo list",
-        demo: "https://fortnitetodolist.com",
-        code: "https://github.com/jordanbkatz/task-manager-evolved"
     },
     {
         name: "Click Brothas",
@@ -31,12 +25,11 @@ const projects: IProject[] = [
         code: "https://github.com/jordanbkatz/click-brothas"
     },
     {
-        name: "Karma API",
-        description: "A REST API to get the Reddit karma of a specific user",
-        demo: "https://karma-api.herokuapp.com",
-        code: "https://github.com/jordanbkatz/karma-api"
+        name: "Fortnite Todo List",
+        description: "A Fortnite-themed todo list",
+        demo: "https://fortnitetodolist.com",
+        code: "https://github.com/jordanbkatz/task-manager-evolved"
     }
-
 ];
 
 export default projects;
